@@ -1,0 +1,49 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="gui:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/gui_jar</output-path>
+    <root id="root">
+      <element id="archive" name="gui.jar">
+        <element id="module-output" name="gui" />
+      </element>
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-scene:17.2" />
+      <element id="library" level="project" name="Maven: net.minidev:accessors-smart:2.4.11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:17.0.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:linux:17.0.2" />
+      <element id="library" level="project" name="Maven: org.controlsfx:controlsfx:11.1.2" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-gameplay:17.2" />
+      <element id="library" level="project" name="Maven: net.minidev:json-smart:2.4.11" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-web:linux:17.0.2" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.12.1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.12.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:17.0.2" />
+      <element id="library" level="project" name="Maven: org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0" />
+      <element id="library" level="project" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:17.0.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:linux:17.0.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:linux:17.0.2" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl:17.2" />
+      <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
+      <element id="library" level="project" name="Maven: org.json:json:20210307" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:17.0.2" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-core:17.2" />
+      <element id="library" level="project" name="Maven: org.ow2.asm:asm:9.3" />
+      <element id="library" level="project" name="Maven: com.dlsc.formsfx:formsfx-core:11.5.0" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-entity:17.2" />
+      <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:modular:1.6.0" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.12.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-media:linux:17.0.2" />
+      <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-javafx:12.3.1" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:lifecycle:4.0.13" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:audio:4.0.13" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:storage:4.0.13" />
+      <element id="library" level="project" name="Maven: com.gluonhq.attach:util:4.0.13" />
+      <element id="library" level="project" name="Maven: com.github.almasb:fxgl-io:17.2" />
+      <element id="library" level="project" name="Maven: net.synedra:validatorfx:0.4.0" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:linux:17.0.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:17.0.2" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:17.0.2" />
+      <element id="library" level="project" name="Maven: org.kordamp.ikonli:ikonli-core:12.3.1" />
+    </root>
+  </artifact>
+</component>

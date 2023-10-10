@@ -1,0 +1,64 @@
+version : '3.8'
+
+services:
+  activemq:
+    image: rmohr/activemq
+    container_name: activemq
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+    volumes:
+      - ./data/activemq/conf:/opt/activemq/conf
+      - ./data/activemq/data:/opt/activemq/data
+    user: root
+  postdb:
+    build: db_docker/postdb/.
+    container_name: postdb
+    #network_mode: host
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "30001:5432"
+  spring-boot:
+    build: springbootAPI/.
+    container_name: spring-boot
+    #network_mode: host
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postdb:5432/postdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    #  - SPRING_ACTIVEMQ_BROKER_URL=tcp://activemq:61616  #not worked on Producer Class, change the host on Producer Class from 'localhost' to 'activemq'
+    ports:
+      - "5001:8081"
+    depends_on:
+      - postdb
+      - activemq
+  letterservice:
+    build: Letterservice/.
+    container_name: letterservice
+    #network_mode: host
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postdb:5432/postdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_ACTIVEMQ_BROKER_URL=tcp://activemq:61616
+    ports:
+      - "5002:8082"
+    depends_on:
+      - postdb
+      - activemq
+  packageservice:
+    build: Packageservice/.
+    container_name: packageservice
+    #network_mode: host
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postdb:5432/postdb
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+      - SPRING_ACTIVEMQ_BROKER_URL=tcp://activemq:61616
+    ports:
+      - "5003:8083"
+    depends_on:
+      - postdb
+      - activemq
